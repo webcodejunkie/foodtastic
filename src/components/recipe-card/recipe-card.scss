@@ -1,8 +1,18 @@
 .modal {
   display: flex !important;
   flex-direction: column;
-  background-color: white;
   align-items: center;
+  color: black;
+  background-color: #282525;
+}
+
+.modal-img-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.modal-img {
+  width: 100%;
 }
 
 .button-wrapper {
@@ -12,6 +22,7 @@
 }
 
 .close-button {
+  color: #FFF;
   padding: 1rem;
   font-size: 30px;
   cursor: pointer;
@@ -25,7 +36,7 @@
 
 .card {
   color: black;
-  background: white;
+  background: #FFF;
 }
 
 .card-list {
@@ -38,7 +49,7 @@
 .card-head {
   font-weight: 300;
   font-size: 20px;
-  background-color: white;
+  background-color: #FFF;
 }
 
 .card-text {
@@ -51,25 +62,95 @@
 }
 
 .meal-instructions {
+  background: #ededed;
+  width: 100%;
+  padding: 15px;
+}
 
+.meal-properties-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  color: #FFF;
+  background-color: #6de56d;
+}
+
+.meal-properties-wrapper > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.meal-prop {
+  color: #000;
+}
+
+.meal-quick-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cusine-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  padding: 15px;
+  background: #FFF;
+}
+
+.recipe-quick-info {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  color: white;
+}
+
+.recipe-info-container {
+  text-align: center;
+  p {
+    font-size: 16px;
+  }
 }
 
 .recipe-summary {
+  padding: 15px;
+  background: #FFF;
+}
 
+.recipe-title {
+  color: #FFF;
 }
 
 .recipe-source {
   display: flex;
+  color: #FFF;
 }
 
 @media only screen and (max-width: 945px) {
   .card-list {
     grid-template-columns: 1fr;
   }
+
+  .meal-properties-wrapper {
+    flex-direction: column;
+  }
+
+  .recipe-source {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-@media only screen and (min-width: 945px) and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .card-list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .recipe-quick-info {
+    align-items: center;
+    flex-direction: column;
   }
 }
